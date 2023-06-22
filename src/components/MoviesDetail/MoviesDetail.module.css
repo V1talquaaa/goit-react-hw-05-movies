@@ -1,0 +1,31 @@
+.movieWrapper {
+    display: flex;
+}
+
+.movieWrapper > img {
+    width: 350px;
+    height: 450px;
+    display: inline-block;
+}
+
+.filmInfo {
+    margin-left: 10px;
+    
+}
+
+.genreItem {
+    display: flex;
+    
+}
+
+.genreItem > p {
+    margin-right: 10px;
+}
+.genresTitle {
+    margin-bottom: 0;
+}
+
+.castReviewsSection {
+    margin-top: 5px;
+    border: 3px solid rgb(177, 165, 165);
+}
