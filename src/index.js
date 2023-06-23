@@ -4,10 +4,8 @@ import { App } from 'components/App';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 
-const BASENAME = "/goit-react-hw-05-movies"
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode basename={BASENAME}>
+  <React.StrictMode basename="/goit-react-hw-05-movies">
     <BrowserRouter >
     <App />
     </BrowserRouter>
