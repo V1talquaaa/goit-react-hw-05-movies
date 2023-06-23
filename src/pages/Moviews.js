@@ -1,6 +1,6 @@
 import { getFilmByQuery } from "Services/getFilms";
 import { useState } from "react";
-import { NavLink, useLocation, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 
 const Movies = () => {
 const [filmsByQuery, setfilmsByQuery] = useState([])
@@ -29,7 +29,7 @@ const handleQuery = (e) => {
     </form>
     <ul>
     {filmsByQuery.map(({title, id}) => {
-        return <li key={id}><NavLink to={`${id}`} state={{from: location}}>{title}</NavLink></li>
+        return <li key={id}><Link to={`${id}`} state={{from: location}}>{title}</Link></li>
     })}
     </ul>
     </>

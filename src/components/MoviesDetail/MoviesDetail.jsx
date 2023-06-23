@@ -1,11 +1,8 @@
 import { getFilmById } from 'Services/getFilms';
 import Title from 'components/Title/Title';
-import { NavLink, Routes, useLocation, useParams, Link } from 'react-router-dom';
+import { NavLink, Routes, useLocation, useParams, Link, Outlet } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import css from './MoviesDetail.module.css'
-import Cast from 'components/Cast/Cast';
-import Reviews from 'components/Reviews/Reviews';
-import { Route } from 'react-router-dom';
 
 const MoviesDetail = () => {
   
@@ -63,10 +60,10 @@ const [movie, setMovie] = useState([]);
             <NavLink to="reviews"><li>Reviews</li></NavLink>
           </ul>
     </div>
-          <Routes>
+          {/* <Routes>
           <Route path="cast" moviesId={moviesId} element={<Cast />}></Route>
           <Route path="reviews" moviesId={moviesId} element={<Reviews />}></Route>
-          </Routes>
+          </Routes> */}
           
   </>
 };
