@@ -1,8 +1,9 @@
 import { getFilmById } from 'Services/getFilms';
 import Title from 'components/Title/Title';
-import { NavLink,  useLocation, useParams, Link } from 'react-router-dom';
+import { NavLink,  useLocation, useParams, Link, Outlet } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import css from './MoviesDetail.module.css'
+import prof  from '../../notLoadedProfilePhoto.png'
 
 const MoviesDetail = () => {
   
@@ -23,7 +24,7 @@ const [movie, setMovie] = useState([]);
   if(!movie) return;
 
   return <>
-  <Link to={backToLocation.current}>Go back</Link>
+  <Link to={backToLocation.current} state ={{from : location}}>Go back</Link>
   <div key={moviesId}>
     {movie.map(
     ({
@@ -59,12 +60,8 @@ const [movie, setMovie] = useState([]);
             <NavLink to="cast"><li>Cast</li></NavLink>
             <NavLink to="reviews"><li>Reviews</li></NavLink>
           </ul>
-    </div>
-          {/* <Routes>
-          <Route path="cast" moviesId={moviesId} element={<Cast />}></Route>
-          <Route path="reviews" moviesId={moviesId} element={<Reviews />}></Route>
-          </Routes> */}
-          
+          <Outlet />
+    </div>      
   </>
 };
 

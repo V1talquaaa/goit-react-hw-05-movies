@@ -5,10 +5,12 @@ import { NavLink } from "react-router-dom";
 
 const Home = () => {
     const [films, setFilms] = useState([])
-// Якщо треба зробити http запит використовуємо componentDidMount, він же useEffect на хуках
+
 useEffect(() => {
     getFilms().then(fetchedFilms => setFilms(fetchedFilms.results))
 }, [])
+
+
     return <div>
         <h2>Trending today</h2>
         <ul>

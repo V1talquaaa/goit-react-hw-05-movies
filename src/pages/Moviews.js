@@ -18,6 +18,7 @@ const handleQuery = (e) => {
     setSearchParams({query: query})
     query&&
     getFilmByQuery(query).then(data => setfilmsByQuery(data.results))
+    
   };
 
   return (
