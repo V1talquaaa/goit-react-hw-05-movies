@@ -1,6 +1,6 @@
 import { getFilmById } from 'Services/getFilms';
 import Title from 'components/Title/Title';
-import { NavLink, Routes, useLocation, useParams, Link, Outlet } from 'react-router-dom';
+import { NavLink,  useLocation, useParams, Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
 import css from './MoviesDetail.module.css'
 
