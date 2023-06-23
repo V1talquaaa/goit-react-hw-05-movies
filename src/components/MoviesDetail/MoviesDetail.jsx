@@ -21,10 +21,12 @@ const [movie, setMovie] = useState([]);
     
   }, [moviesId])
 
+
   if(!movie) return;
 
   return <>
-  <Link to={backToLocation.current} state ={{from : location}}>Go back</Link>
+  <Link to={backToLocation.current}>Go back</Link>
+ 
   <div key={moviesId}>
     {movie.map(
     ({

@@ -1,12 +1,20 @@
 import { getFilmByQuery } from "Services/getFilms";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
 
 const Movies = () => {
 const [filmsByQuery, setfilmsByQuery] = useState([])
 const [query, setQuery] = useState('')
-const [, setSearchParams] = useSearchParams()
+const [searchParams, setSearchParams] = useSearchParams()
 const location = useLocation();
+
+useEffect(() => {
+  const query = searchParams.get('query')
+  if(!query) return
+  getFilmByQuery(query).then(data => setfilmsByQuery(data.results))
+
+}, [query, searchParams])
+
 
 
 const handleQuery = (e) => {
@@ -16,8 +24,6 @@ const handleQuery = (e) => {
   const onSubmitForm = (e) => {
     e.preventDefault();
     setSearchParams({query: query})
-    query&&
-    getFilmByQuery(query).then(data => setfilmsByQuery(data.results))
     
   };
 
@@ -28,13 +34,15 @@ const handleQuery = (e) => {
       
     <button type="submit">Search</button>
     </form>
-    <ul>
+    <ul >
     {filmsByQuery.map(({title, id}) => {
-        return <li key={id}><Link to={`${id}`} state={{from: location}}>{title}</Link></li>
+        return <li key={id} ><Link to={`${id}`} state={{from: location}}>{title}</Link></li>
     })}
     </ul>
     </>
   );
 };
+
+
 
 export default Movies;
