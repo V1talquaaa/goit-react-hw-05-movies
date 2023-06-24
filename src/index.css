@@ -26,6 +26,7 @@ nav {
   text-decoration: none;
   background-color: rgb(50, 10, 95);
   color: beige;
+  border-bottom: 2px solid #fff;
 
 }
 
@@ -33,6 +34,7 @@ nav > a {
   text-decoration: none;
   color: #f8f7fa;
   margin-right: 15px;
+  
 }
 
 nav > a:hover {
