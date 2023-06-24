@@ -10,7 +10,7 @@ const Reviews = () => {
     try {
         getReviewById(moviesId).then((data) => setReview(data.results))
         if(review.length === 0) {
-            return <p>Oops, we don`t have any reviews</p>
+            return <p className={css.reviewItemAuthor}>Oops, we don`t have any reviews</p>
         }
     } catch (error) {
         console.error('data not fetched')
