@@ -49,3 +49,7 @@
 li {
     margin-right: 10px;
 }
+.addSectionList {
+    display: flex;
+    
+}

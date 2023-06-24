@@ -58,7 +58,7 @@ const [movie, setMovie] = useState([]);
   </div>
   <div className={css.castReviewsSection}>
           <Title title={"Additional information"}></Title>
-          <ul>
+          <ul className={css.addSectionList}>
             <NavLink to="cast" className={css.additionalSectionLink}><li>Cast</li></NavLink>
             <NavLink to="reviews"className={css.additionalSectionLink}><li>Reviews</li></NavLink>
           </ul>
