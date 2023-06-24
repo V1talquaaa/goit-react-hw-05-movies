@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/168.9475263d.chunk.css","mappings":"AAGA,4DACI,UACJ","sources":["components/Reviews/Reviews.module.css"],"sourcesContent":[".reviewItem {\n    color: #fff;\n}\n.reviewItemAuthor {\n    color: #fff;\n}"],"names":[],"sourceRoot":""}
