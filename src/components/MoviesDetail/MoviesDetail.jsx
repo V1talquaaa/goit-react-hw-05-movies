@@ -25,7 +25,7 @@ const [movie, setMovie] = useState([]);
   if(!movie) return;
 
   return <>
-  <Link to={backToLocation.current}>Go back</Link>
+  <Link to={backToLocation.current}><button className={css.button}>Go back</button></Link>
  
   <div key={moviesId}>
     {movie.map(
@@ -59,8 +59,8 @@ const [movie, setMovie] = useState([]);
   <div className={css.castReviewsSection}>
           <Title title={"Additional information"}></Title>
           <ul>
-            <NavLink to="cast"><li>Cast</li></NavLink>
-            <NavLink to="reviews"><li>Reviews</li></NavLink>
+            <NavLink to="cast" className={css.additionalSectionLink}><li>Cast</li></NavLink>
+            <NavLink to="reviews"className={css.additionalSectionLink}><li>Reviews</li></NavLink>
           </ul>
           <Outlet />
     </div>      

@@ -15,7 +15,7 @@ const Cast = () => {
  
     return <ul>
         {cast.map(({name, character, profile_path, id}) => {
-            return <li key={id}>
+            return <li key={id} class={css.castItem}>
                 <img src={`https://image.tmdb.org/t/p/w500${profile_path}`} alt={name} className={css.castImage}></img>
                 <p>{name}</p>
                 <p>Character: {character}</p>

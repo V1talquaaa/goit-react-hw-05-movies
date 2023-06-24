@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Home from '../pages/Home';
-
 import { Layout } from 'Layout/Layout';
 
 
